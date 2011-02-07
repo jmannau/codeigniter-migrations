@@ -8,8 +8,6 @@
 | You should enable migrations whenever you intend to do a schema migration
 | and disable it back when you're done.
 |
-| Some more severe security measures might take place in future releases.
-|
 */
 $config['migrations_enabled'] = TRUE;
 
@@ -19,14 +17,9 @@ $config['migrations_enabled'] = TRUE;
 | Migrations version
 |--------------------------------------------------------------------------
 |
-| This is used to set the default migration for this code base. 
-| Sometimes you want the system to automaticly migrate the database
-| to the most current migration. Or there might be higher migrations
-| that are not part of the migration-> env. Setting the migration does 
-| does nothing here. It is a way for a programer to check the config.
-|
-| On login you might want to do something like this 
-| $this->migration->version($this->config->item('migrations_version'));
+| This is used to set migration version that the file system should be on.
+| If you run $this->migration->latest() this is the version that schema will
+| be upgraded / downgraded to.
 |
 */
 $config['migrations_version'] = 1;
