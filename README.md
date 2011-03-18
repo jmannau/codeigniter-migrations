@@ -45,11 +45,15 @@ comment out the `show_error()` in the construct, and put it back in place when y
 
 Migration files should be named vvv_a_migration.php where vvv is a 3 digit version number ie: 001_create_db.php
 
-Each migration file should contain one class named Migration_a_migration (note that the class name is of the form 'Migration'.'migration file name'). ie: 001_create_db.php could look like
-<?php
-class Migration_create_db extends Migration{
+Each migration file should contain one class named Migration_a_migration (note that the class name is of the form 'Migration'.'migration file name'). ie: 001_create_db.php could look like;
 
-}
+    <?php
+    
+        class Migration_create_db extends Migration{
+        
+        }
+    /* End of file 001_create_db.php */
+    /* Location: ./application/migrations/001_create_db.php */
 	
 ## Examples
 	
