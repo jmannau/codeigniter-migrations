@@ -45,7 +45,8 @@ comment out the `show_error()` in the construct, and put it back in place when y
 
 Migration files should be named vvv_a_migration.php where vvv is a 3 digit version number ie: 001_create_db.php
 
-Each migration file should contain one class named Migration_a_migration (note that the class name is of the form 'Migration'.'migration file name'). ie: 001_create_db.php could look like;
+Each migration file should contain one class named Migration_a_migration (note that the class name is of the form 'Migration'.'migration file name'). 
+###ie: 001_create_db.php could look like;
 
     <?php
     
@@ -70,9 +71,3 @@ Each migration file should contain one class named Migration_a_migration (note t
     {
     	show_error($this->migration->error);
     }
-
-## Other Helpful Stuff
-
-Included in this git repo is an example CodeIgniter Hook and a basic application/config/hooks.php to show
-how to enable it. This hook is one of several ways to have migrations run on every page load. You
-could also place the code into a MY_Controller.
