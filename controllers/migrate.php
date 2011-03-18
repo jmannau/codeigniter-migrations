@@ -3,7 +3,7 @@ class Migrate extends CI_Controller
 {
 	function __construct()
 	{
-		parent::Controller();
+		parent::__construct();
 		$this->load->library('migrations');
 
 		$this->migrations->set_verbose(TRUE);
