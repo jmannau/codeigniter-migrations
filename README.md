@@ -40,6 +40,16 @@ point your `$config["migrations_path"]` to.
 
 The migrate.php controller just shows the use of these functions. If you are going to use it.
 comment out the `show_error()` in the construct, and put it back in place when you are done.
+
+## Migration Files
+
+Migration files should be named vvv_a_migration.php where vvv is a 3 digit version number ie: 001_create_db.php
+
+Each migration file should contain one class named Migration_a_migration (note that the class name is of the form 'Migration'.'migration file name'). ie: 001_create_db.php could look like
+<?php
+class Migration_create_db extends Migration{
+
+}
 	
 ## Examples
 	
