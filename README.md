@@ -31,8 +31,8 @@ The migration files included in this are just examples. You should install them 
 point your `$config["migrations_path"]` to.
  
 ## Usage
-	
-    $this->load->library('migrations');
+    $this->config->load('migrations', true);
+    $this->load->library('migrations', $this->config->item('migrations'));
     $this->migrations->set_verbose(TRUE); // echo statements or not
     $this->migrations->version(id); // migrate the database to a particular version
     $this->migrations->latest(); // migrate the database to the latest version
